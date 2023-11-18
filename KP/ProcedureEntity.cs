@@ -16,11 +16,14 @@ namespace StomatologyProject
         }
 
         [Key]
-        public long id_procedure { get; set; }
+        [Column("id_procedure")]
+        public long Procedureld { get; set; }
 
-        public long id_doctor { get; set; }
+        [Column("id_doctor")]
+        public long Doctorld { get; set; }
 
-        public long id_assistant { get; set; }
+        [Column("id_assistant")]
+        public long Assistantld { get; set; }
 
         [Required]
         [StringLength(2147483647)]

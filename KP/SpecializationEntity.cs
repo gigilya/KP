@@ -17,7 +17,8 @@ namespace StomatologyProject
         }
 
         [Key]
-        public long id_specialization { get; set; }
+        [Column("id_specialization")]
+        public long Specializationld { get; set; }
 
         [Required]
         [StringLength(2147483647)]

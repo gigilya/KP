@@ -17,7 +17,7 @@ namespace StomatologyProject
 
         [Key]
         [Column("id_assistant")]
-        public long id_assistant_ { get; set; }
+        public long Assistantld { get; set; }
 
         [Required]
         [StringLength(2147483647)]

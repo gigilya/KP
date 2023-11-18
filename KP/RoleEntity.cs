@@ -16,7 +16,8 @@ namespace StomatologyProject
         }
 
         [Key]
-        public long id_role { get; set; }
+        [Column("id_role")]
+        public long Roleld { get; set; }
 
         [Required]
         [StringLength(2147483647)]

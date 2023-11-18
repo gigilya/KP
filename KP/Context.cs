@@ -26,7 +26,7 @@ namespace StomatologyProject
             modelBuilder.Entity<AssistantEntity>()
                 .HasMany(e => e.Procedure)
                 .WithRequired(e => e.Assistant)
-                .HasForeignKey(e => e.id_assistant)
+                .HasForeignKey(e => e.Assistantld)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DoctorEntity>()

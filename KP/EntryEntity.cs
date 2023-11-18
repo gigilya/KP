@@ -10,11 +10,14 @@ namespace StomatologyProject
     public partial class EntryEntity
     {
         [Key]
-        public long id_entry { get; set; }
+        [Column("id_entry")]
+        public long Entryld { get; set; }
 
-        public long id_patient { get; set; }
+        [Column("id_patient")]
+        public long Patientld { get; set; }
 
-        public long id_procedure { get; set; }
+        [Column("id_procedure")]
+        public long Procedureld { get; set; }
 
         [Required]
         [StringLength(2147483647)]
