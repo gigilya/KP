@@ -1,4 +1,4 @@
-namespace StomatologyProject
+namespace Infrastucture
 {
     using System;
     using System.Collections.Generic;
@@ -25,7 +25,6 @@ namespace StomatologyProject
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        //[Column("User")]
         public virtual ICollection<UserEntity> User { get; set; }
     }
 }

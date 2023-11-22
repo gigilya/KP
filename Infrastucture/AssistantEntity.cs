@@ -1,4 +1,4 @@
-namespace StomatologyProject
+namespace Infrastucture
 {
     using System;
     using System.Collections.Generic;
@@ -34,7 +34,7 @@ namespace StomatologyProject
         public string Middlename { get; set; }
 
         [Column("id_specialization")]
-        public long Specialization { get; set; }
+        public long Specializationld { get; set; }
 
         [Required]
         [StringLength(2147483647)]
