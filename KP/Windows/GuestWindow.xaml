@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
-        Title="Вход" Height="600"  Width="550" MinHeight="400" MinWidth="350">
+        WindowStartupLocation="CenterScreen"
+        Icon="F:\Opera загрузки\toothbrush-paste.png"
+        Title="Вход" Height="700"  Width="550" MinHeight="650" MinWidth="350">
     <Grid>
+        <Canvas>
+            <Button x:Name="MenuButton"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Click="AuthButton_Click"
+                    Canvas.Right="20" 
+                    Canvas.Top="20" 
+                    Cursor="Hand" 
+                    Foreground="#FF698AFF">
+                <Image Source="F:\Opera загрузки\arrow-left.png" />
+            </Button>
+            <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+                    HorizontalAlignment="Center" 
+                    Height="60" 
+                    VerticalAlignment="Top"/>
+            <Label Content="Клуб зубастиков" 
+                    Canvas.Left="65" 
+                    Canvas.Top="18" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Top" 
+                    FontSize="16" 
+                    FontFamily="Arial" 
+                    FontWeight="Bold"/>
+        </Canvas>
         <StackPanel Orientation="Vertical" Width="250" Height="250" >
             <Label Content="Логин" 
             FontFamily="Arial" 
@@ -26,13 +51,14 @@
                   FontFamily="Arial" 
                   FontSize="14"
                   DataContext="Введите пароль"/>
-            <Button x:Name="AuthButton"
-             Content="Авторизоваться" 
+            <Button x:Name="GuestButton"
+                    Click="GuestButton_Click"
+             Content="Войти" 
              Background="#FF698AFF" 
              FontFamily="Arial" 
              FontSize="16" 
              Margin="10, 20 ,10, 0" 
-             Height="40" BorderBrush="#FF698AFF"/>
+             Height="40" BorderBrush="#FF698AFF" Cursor="Hand"/>
         </StackPanel>
     </Grid>
 </Window>

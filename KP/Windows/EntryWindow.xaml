@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
-        Title="Приём" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Icon="F:\Opera загрузки\toothbrush-paste.png"
+        Title="Приём" Height="700"  Width="550" MinHeight="650" MinWidth="550">
     <Grid>
-        
+        <StackPanel>
+            <Canvas Height="100">
+                <Button x:Name="MenuButton"
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Click="MenuButton_Click"
+                        Canvas.Right="20" 
+                        Canvas.Top="20" 
+                        Cursor="Hand" 
+                        Foreground="#FF698AFF">
+                    <Image Source="F:\Opera загрузки\arrow-left.png" />
+                </Button>
+                <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+                       HorizontalAlignment="Center" 
+                       Height="60" 
+                       VerticalAlignment="Top"/>
+                <Label Content="Клуб зубастиков" 
+                       Canvas.Left="65" 
+                       Canvas.Top="18" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top" 
+                       FontSize="16" 
+                       FontFamily="Arial" 
+                       FontWeight="Bold"/>
+            </Canvas>
+            <DataGrid x:Name="TableDoctor" 
+                      Style="{StaticResource MaterialDesignDataGrid}"
+                      MinHeight="450"
+                      MinWidth="450"
+                      HorizontalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Фамилия"/>
+                    <DataGridTextColumn Header="Имя"/>
+                    <DataGridTextColumn Header="Отчество"/>
+                    <DataGridTextColumn Header="Доктор"/>
+                    <DataGridTextColumn Header="Ассистент"/>
+                    <DataGridTextColumn Header="Процедура"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Window>

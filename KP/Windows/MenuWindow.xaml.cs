@@ -23,5 +23,40 @@ namespace StomatologyProject.Windows
         {
             InitializeComponent();
         }
+
+        private void DoctorButton_Click(object sender, RoutedEventArgs e)
+        {
+            DoctorWindow doctorWindow = new DoctorWindow();
+            this.Close();
+            doctorWindow.ShowDialog();
+        }
+
+        private void AssistanButton_Click(object sender, RoutedEventArgs e)
+        {
+            AssistanWindow assistanWindow = new AssistanWindow();
+            this.Close();
+            assistanWindow.ShowDialog();
+        }
+
+        private void PatientButton_Click(object sender, RoutedEventArgs e)
+        {
+            PatientWindow patientWindow = new PatientWindow();
+            this.Close();
+            patientWindow.ShowDialog();
+        }
+
+        private void ProcedureButton_Click(object sender, RoutedEventArgs e)
+        {
+            ProcedureWindow procedureWindow = new ProcedureWindow();
+            this.Close();
+            procedureWindow.ShowDialog();
+        }
+
+        private void EntryButton_Click(object sender, RoutedEventArgs e)
+        {
+            EntryWindow entryWindow = new EntryWindow();
+            this.Close();
+            entryWindow.ShowDialog();
+        }
     }
 }

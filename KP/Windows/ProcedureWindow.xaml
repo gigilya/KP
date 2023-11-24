@@ -5,8 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
-        Title="Процедуры" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Icon="F:\Opera загрузки\toothbrush-paste.png"
+        Title="Процедуры" Height="700" Width="550" MinHeight="650" MinWidth="500">
     <Grid>
-        
+        <StackPanel>
+            <Canvas Height="100">
+                <Button x:Name="MenuButton"
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Click="MenuButton_Click"
+                        Canvas.Right="20" 
+                        Canvas.Top="20" 
+                        Cursor="Hand" 
+                        Foreground="#FF698AFF">
+                    <Image Source="F:\Opera загрузки\arrow-left.png" />
+                </Button>
+                <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+                       HorizontalAlignment="Center" 
+                       Height="60" 
+                       VerticalAlignment="Top"/>    
+                <Label Content="Клуб зубастиков" 
+                       Canvas.Left="65" 
+                       Canvas.Top="18" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top" 
+                       FontSize="16" 
+                       FontFamily="Arial" 
+                       FontWeight="Bold"/>
+            </Canvas>
+            <DataGrid x:Name="TablePatient" 
+                      Style="{StaticResource MaterialDesignDataGrid}"
+                      MinHeight="450"
+                      MinWidth="450"
+                      HorizontalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Наименование"/>
+                    <DataGridTextColumn Header="Цена"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">
+                <Button x:Name="AddButton"
+                        Content="Добавить" 
+                        HorizontalAlignment="Left" 
+                        Background="#FF698AFF" 
+                        BorderBrush="#FF698AFF" 
+                        FontFamily="Arial"
+                        FontSize="14"/>
+                <Button x:Name="DeletButton"
+                        Content="Удалить" 
+                        HorizontalAlignment="Center" 
+                        Background="#FF698AFF" 
+                        BorderBrush="#FF698AFF" 
+                        FontFamily="Arial" 
+                        FontSize="14"/>
+                <Button x:Name="UpdateButton"
+                        Content="Обновить"
+                        HorizontalAlignment="Right"
+                        Background="#FF698AFF" 
+                        BorderBrush="#FF698AFF" 
+                        FontFamily="Arial" 
+                        FontSize="14"/>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>

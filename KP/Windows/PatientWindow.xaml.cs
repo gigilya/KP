@@ -23,5 +23,11 @@ namespace StomatologyProject.Windows
         {
             InitializeComponent();
         }
+        private void MenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow menuWindow = new MenuWindow();
+            this.Close();
+            menuWindow.ShowDialog();
+        }
     }
 }

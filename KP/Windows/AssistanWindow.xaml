@@ -1,4 +1,4 @@
-﻿<Window x:Class="StomatologyProject.Windows.DoctorWindow"
+﻿<Window x:Class="StomatologyProject.Windows.AssistanWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,37 +7,37 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Icon="F:\Opera загрузки\toothbrush-paste.png"
-        Title="Врачи" Height="700" Width="550" MinHeight="650" MinWidth="500">
+        Title="AssistanWindow"  Height="700" Width="550" MinHeight="650" MinWidth="500">
     <Grid>
         <StackPanel>
             <Canvas Height="100">
                 <Button x:Name="MenuButton"
                         Style="{StaticResource MaterialDesignFlatButton}" 
-                        Click="MenuButton_Click"
-                        Canvas.Right="20" 
-                        Canvas.Top="20" 
-                        Cursor="Hand" 
-                        Foreground="#FF698AFF">
+                         Click="MenuButton_Click"
+                         Canvas.Right="20" 
+                         Canvas.Top="20" 
+                         Cursor="Hand" 
+                         Foreground="#FF698AFF">
                     <Image Source="F:\Opera загрузки\arrow-left.png" />
                 </Button>
                 <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
-                       HorizontalAlignment="Center" 
-                       Height="60" 
-                       VerticalAlignment="Top"/>
+                        HorizontalAlignment="Center" 
+                        Height="60" 
+                        VerticalAlignment="Top"/>
                 <Label Content="Клуб зубастиков" 
-                       Canvas.Left="65" 
-                       Canvas.Top="18" 
-                       HorizontalAlignment="Center" 
-                       VerticalAlignment="Top" 
-                       FontSize="16" 
-                       FontFamily="Arial" 
-                       FontWeight="Bold"/>
+                        Canvas.Left="65" 
+                        Canvas.Top="18" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top" 
+                        FontSize="16" 
+                        FontFamily="Arial" 
+                        FontWeight="Bold"/>
             </Canvas>
             <DataGrid x:Name="TableDoctor" 
-                      Style="{StaticResource MaterialDesignDataGrid}"
-                      MinHeight="450"
-                      MinWidth="450"
-                      HorizontalAlignment="Center">
+                       Style="{StaticResource MaterialDesignDataGrid}"
+                       MinHeight="450"
+                       MinWidth="450"
+                       HorizontalAlignment="Center">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Фамилия"/>
                     <DataGridTextColumn Header="Имя"/>
