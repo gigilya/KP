@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Icon="F:\Opera загрузки\toothbrush-paste.png"
-        Title="Пациенты" Height="700" Width="550" MinHeight="650" MinWidth="500">
+        Title="Пациенты" Height="700" Width="700" MinHeight="650" MinWidth="700">
     <Grid>
         <StackPanel>
             <Canvas Height="100">
@@ -42,6 +42,9 @@
                     <DataGridTextColumn Header="Фамилия"/>
                     <DataGridTextColumn Header="Имя"/>
                     <DataGridTextColumn Header="Отчество"/>
+                    <DataGridTextColumn Header="Пол"/>
+                    <DataGridTextColumn Header="Дата рождения"/>
+                    <DataGridTextColumn Header="Адрес"/>
                     <DataGridTextColumn Header="Контактная информация"/>
                 </DataGrid.Columns>
             </DataGrid>

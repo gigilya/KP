@@ -39,6 +39,8 @@
                       MinWidth="450"
                       HorizontalAlignment="Center">
                 <DataGrid.Columns>
+                    <DataGridTextColumn Header="Логин врача"/>
+                    <DataGridTextColumn Header="Логин ассистента"/>
                     <DataGridTextColumn Header="Наименование"/>
                     <DataGridTextColumn Header="Цена"/>
                 </DataGrid.Columns>

@@ -42,9 +42,9 @@
                     <DataGridTextColumn Header="Фамилия"/>
                     <DataGridTextColumn Header="Имя"/>
                     <DataGridTextColumn Header="Отчество"/>
-                    <DataGridTextColumn Header="Доктор"/>
-                    <DataGridTextColumn Header="Ассистент"/>
                     <DataGridTextColumn Header="Процедура"/>
+                    <DataGridTextColumn Header="Дата"/>
+                    <DataGridTextColumn Header="Статус"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

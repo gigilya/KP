@@ -15,27 +15,27 @@ using System.Windows.Shapes;
 namespace StomatologyProject.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для AuthWindow.xaml
+    /// Логика взаимодействия для GuestWindow.xaml
     /// </summary>
-    public partial class AuthWindow : Window
+    public partial class UserWindow : Window
     {
-        public AuthWindow()
+        public UserWindow()
         {
             InitializeComponent();
         }
 
-        private void UserButton_Click(object sender, RoutedEventArgs e)
-        {
-            UserWindow guestWindow = new UserWindow();
-            this.Close();
-            guestWindow.ShowDialog();
-        }
-
-        private void AuthButton_Click(object sender, RoutedEventArgs e)
+        private void GuestButton_Click(object sender, RoutedEventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();
             this.Close();
             menuWindow.ShowDialog();
+        }
+
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            this.Close();
+            authWindow.ShowDialog();
         }
     }
 }

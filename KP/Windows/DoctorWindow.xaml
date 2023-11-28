@@ -43,6 +43,7 @@
                     <DataGridTextColumn Header="Имя"/>
                     <DataGridTextColumn Header="Отчество"/>
                     <DataGridTextColumn Header="Специализация"/>
+                    <DataGridTextColumn Header="Телефон"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">
