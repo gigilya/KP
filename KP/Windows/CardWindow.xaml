@@ -9,20 +9,6 @@
         Icon="F:\Opera загрузки\toothbrush-paste.png"
         Title="Создание пользователя" Height="800"  Width="550" MinHeight="750" MinWidth="450">
     <Grid  Cursor="Hand">
-        <Canvas>
-            <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
-                HorizontalAlignment="Center" 
-                Height="60" 
-                VerticalAlignment="Top"/>
-            <Label Content="Клуб зубастиков" 
-                Canvas.Left="65" 
-                Canvas.Top="18" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Top" 
-                FontSize="16" 
-                FontFamily="Arial" 
-                FontWeight="Bold"/>
-        </Canvas>
         <StackPanel Orientation="Vertical" Width="250" VerticalAlignment="Center">
             <Label Content="Фамилия" 
                 FontFamily="Arial" 
