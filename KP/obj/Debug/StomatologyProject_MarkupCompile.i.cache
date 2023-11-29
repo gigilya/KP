@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\gerka\OneDrive\Рабочий стол\репа\StomatologyProject\KP\App.xaml
-12061826496
+9-1563363310
 
-151389937643
-21535579382
-Windows\MainWindow.xaml;
+14-1469590871
+29444819626
+Windows\AssistanWindow.xaml;Windows\AuthWindow.xaml;Windows\CardWindow.xaml;Windows\DoctorWindow.xaml;Windows\EntryWindow.xaml;Windows\UserWindow.xaml;Windows\MenuWindow.xaml;Windows\PatientWindow.xaml;Windows\ProcedureWindow.xaml;
 
-False
+True
 

@@ -12,16 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace StomatologyProject
+namespace StomatologyProject.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для CardWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CardWindow : Window
     {
-        public MainWindow()
+        public CardWindow()
         {
             InitializeComponent();
+        }
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow menuWindow = new MenuWindow();
+            this.Close();
+            menuWindow.ShowDialog();
         }
     }
 }

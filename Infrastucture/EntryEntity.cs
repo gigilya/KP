@@ -1,4 +1,4 @@
-namespace StomatologyProject
+namespace Infrastucture
 {
     using System;
     using System.Collections.Generic;
@@ -27,10 +27,8 @@ namespace StomatologyProject
         [Column("status_receipt")]
         public long Statusreceipt { get; set; }
 
-        //[Column("id_specialization")]
         public virtual ProcedureEntity Procedure { get; set; }
 
-        //[Column("id_specialization")]
         public virtual PatientEntity Patient { get; set; }
     }
 }

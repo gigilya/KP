@@ -1,4 +1,4 @@
-namespace StomatologyProject
+namespace Infrastucture
 {
     using System;
     using System.Collections.Generic;
@@ -6,37 +6,39 @@ namespace StomatologyProject
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Specialization")]
-    public partial class SpecializationEntity
+    [Table("User")]
+    public partial class UserEntity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SpecializationEntity()
+        public UserEntity()
         {
-            Assistant_ = new HashSet<AssistantEntity>();
             Doctor = new HashSet<DoctorEntity>();
+            Patient = new HashSet<PatientEntity>();
         }
 
         [Key]
-        [Column("id_specialization")]
-        public long Specializationld { get; set; }
+        [Column("id_user")]
+        public long Userld { get; set; }
+
+        [Column("id_role")]
+        public long Roleld { get; set; }
 
         [Required]
         [StringLength(2147483647)]
-        [Column("name")]
-        public string Name { get; set; }
-
-        [Column("wages")]
-        public long Wages { get; set; }
+        [Column("login")]
+        public string Login { get; set; }
 
         [Required]
         [StringLength(2147483647)]
-        [Column("work_schedule")]
-        public string Workschedule { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssistantEntity> Assistant_ { get; set; }
+        [Column("password")]
+        public string Password { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DoctorEntity> Doctor { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PatientEntity> Patient { get; set; }
+
+        public virtual RoleEntity Role { get; set; }
     }
 }

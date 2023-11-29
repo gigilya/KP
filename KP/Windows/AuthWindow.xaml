@@ -3,21 +3,93 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
-        Title="Главное меню" MinHeight="600" MinWidth="550">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-		
-        <Button Grid.Column="2" MaxHeight="50" MaxWidth="100"/>
+        WindowStartupLocation="CenterScreen"
+        Icon="F:\Opera загрузки\toothbrush-paste.png"
+        Title="Авторизация" Height="700"  Width="550" MinHeight="650" MinWidth="450">
+    <Grid  Cursor="Hand">
+        <Canvas>
+            <Button x:Name="UserButton" 
+                    Click="UserButton_Click"
+                    Content="Войти" Background="#698AFF" 
+                    BorderBrush="#698AFF" 
+                    Canvas.Top="20" 
+                    Canvas.Right="20" 
+                    HorizontalAlignment="Center" 
+                    Height="40" 
+                    Width="150" 
+                    FontFamily="Arial" 
+                    FontSize="14" 
+                    Foreground="White" 
+                    Cursor="Hand"/>
+            <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+                   HorizontalAlignment="Center" 
+                   Height="60" 
+                   VerticalAlignment="Top"/>
+            <Label Content="Клуб зубастиков" 
+                   Canvas.Left="65" 
+                   Canvas.Top="18" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" 
+                   FontSize="16" 
+                   FontFamily="Arial" 
+                   FontWeight="Bold"/>
+        </Canvas>
+        <StackPanel Orientation="Vertical" Width="250" VerticalAlignment="Center">
+            <Label Content="Фамилия" 
+                   FontFamily="Arial" 
+                   FontSize="16"/>
+            <TextBox Style="{ StaticResource MaterialDesignFilledTextBox}" 
+                     CaretBrush="Black" 
+                     SelectionBrush="#FF698AFF" 
+                     FontFamily="Arial" 
+                     FontSize="14"
+                     Margin="0,0,0,20"/>
+            <Label Content="Имя" 
+                   FontFamily="Arial" 
+                   FontSize="16"/>
+            <TextBox Style="{ StaticResource MaterialDesignFilledTextBox}" 
+                     CaretBrush="Black" 
+                     SelectionBrush="#FF698AFF" 
+                     FontFamily="Arial" 
+                     FontSize="14"
+                     Margin="0,0,0,20"/>
+            <Label Content="Отчество" 
+                   FontFamily="Arial" 
+                   FontSize="16"/>
+            <TextBox Style="{ StaticResource MaterialDesignFilledTextBox}" 
+                     CaretBrush="Black" 
+                     SelectionBrush="#FF698AFF" 
+                     FontFamily="Arial" 
+                     FontSize="14"
+                     Margin="0,0,0,20"/>
+            <Label Content="Логин" 
+                   FontFamily="Arial" 
+                   FontSize="16"/>
+            <TextBox Style="{ StaticResource MaterialDesignFilledTextBox}" 
+                     CaretBrush="Black" 
+                     SelectionBrush="#FF698AFF" 
+                     FontFamily="Arial" 
+                     FontSize="14"
+                     Margin="0,0,0,20"/>
+            <Label Content="Пароль" 
+                   FontSize="16" 
+                   FontFamily="Arial"/>
+            <PasswordBox Style="{StaticResource MaterialDesignFilledRevealPasswordBox}" 
+                         CaretBrush="Black" 
+                         SelectionBrush="#FF698AFF" 
+                         FontFamily="Arial" 
+                         FontSize="14"/>
+            <Button x:Name="AuthButton"
+                    Click="AuthButton_Click"
+                    Content="Авторизоваться" 
+                    Background="#FF698AFF" 
+                    FontFamily="Arial" 
+                    FontSize="16" 
+                    Margin="10, 20 ,10, 0" 
+                    Height="40" BorderBrush="#FF698AFF"/>
+        </StackPanel>
     </Grid>
 </Window>

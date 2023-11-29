@@ -1,0 +1,52 @@
+﻿<Window x:Class="StomatologyProject.Windows.EntryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StomatologyProject.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Icon="F:\Opera загрузки\toothbrush-paste.png"
+        Title="Приём" Height="700"  Width="550" MinHeight="650" MinWidth="550">
+    <Grid>
+        <StackPanel>
+            <Canvas Height="100">
+                <Button x:Name="MenuButton"
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Click="MenuButton_Click"
+                        Canvas.Right="20" 
+                        Canvas.Top="20" 
+                        Cursor="Hand" 
+                        Foreground="#FF698AFF">
+                    <Image Source="F:\Opera загрузки\arrow-left.png" />
+                </Button>
+                <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+                       HorizontalAlignment="Center" 
+                       Height="60" 
+                       VerticalAlignment="Top"/>
+                <Label Content="Клуб зубастиков" 
+                       Canvas.Left="65" 
+                       Canvas.Top="18" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top" 
+                       FontSize="16" 
+                       FontFamily="Arial" 
+                       FontWeight="Bold"/>
+            </Canvas>
+            <DataGrid x:Name="TableDoctor" 
+                      Style="{StaticResource MaterialDesignDataGrid}"
+                      MinHeight="450"
+                      MinWidth="450"
+                      HorizontalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Фамилия"/>
+                    <DataGridTextColumn Header="Имя"/>
+                    <DataGridTextColumn Header="Отчество"/>
+                    <DataGridTextColumn Header="Процедура"/>
+                    <DataGridTextColumn Header="Дата"/>
+                    <DataGridTextColumn Header="Статус"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>

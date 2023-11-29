@@ -1,4 +1,4 @@
-namespace StomatologyProject
+namespace Infrastucture
 {
     using System;
     using System.Collections.Generic;

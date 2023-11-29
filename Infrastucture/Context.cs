@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace StomatologyProject
+namespace Infrastucture
 {
     public partial class Context : DbContext
     {
@@ -14,7 +14,7 @@ namespace StomatologyProject
 
         public virtual DbSet<AssistantEntity> Assistant_ { get; set; }
         public virtual DbSet<DoctorEntity> Doctor { get; set; }
-        public new virtual DbSet<EntryEntity> Entry { get; set; } // new
+        public virtual DbSet<EntryEntity> Entry { get; set; }
         public virtual DbSet<PatientEntity> Patient { get; set; }
         public virtual DbSet<ProcedureEntity> Procedure { get; set; }
         public virtual DbSet<RoleEntity> Role { get; set; }
@@ -25,7 +25,7 @@ namespace StomatologyProject
         {
             modelBuilder.Entity<AssistantEntity>()
                 .HasMany(e => e.Procedure)
-                .WithRequired(e => e.Assistant)
+                .WithRequired(e => e.Assistant_)
                 .HasForeignKey(e => e.Assistantld)
                 .WillCascadeOnDelete(false);
 
@@ -52,13 +52,13 @@ namespace StomatologyProject
             modelBuilder.Entity<SpecializationEntity>()
                 .HasMany(e => e.Assistant_)
                 .WithRequired(e => e.Specialization_)
-                .HasForeignKey(e => e.Specialization)
+                .HasForeignKey(e => e.Specializationld)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<SpecializationEntity>()
                 .HasMany(e => e.Doctor)
                 .WithRequired(e => e.Specialization_)
-                .HasForeignKey(e => e.Specialization)
+                .HasForeignKey(e => e.Specializationld)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<UserEntity>()

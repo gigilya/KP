@@ -1,4 +1,4 @@
-namespace StomatologyProject
+namespace Infrastucture
 {
     using System;
     using System.Collections.Generic;
@@ -33,10 +33,8 @@ namespace StomatologyProject
         [Column("price")]
         public long Price { get; set; }
 
-        //[Column("Assistant")]
-        public virtual AssistantEntity Assistant { get; set; }
+        public virtual AssistantEntity Assistant_ { get; set; }
 
-        //[Column("Doctor")]
         public virtual DoctorEntity Doctor { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
