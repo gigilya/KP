@@ -99,8 +99,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Windows\AssistanWindow.xaml.cs">
-      <DependentUpon>AssistanWindow.xaml</DependentUpon>
+    <Compile Include="Windows\AssistantWindow.xaml.cs">
+      <DependentUpon>AssistantWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\CardWindow.xaml.cs">
       <DependentUpon>CardWindow.xaml</DependentUpon>
@@ -155,7 +155,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Windows\AssistanWindow.xaml">
+    <Page Include="Windows\AssistantWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,7 +192,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Windows\Resurs\toothbrush-paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Resurs\arrow-left.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

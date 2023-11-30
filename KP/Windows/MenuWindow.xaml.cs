@@ -33,7 +33,7 @@ namespace StomatologyProject.Windows
 
         private void AssistanButton_Click(object sender, RoutedEventArgs e)
         {
-            AssistanWindow assistanWindow = new AssistanWindow();
+            AssistantWindow assistanWindow = new AssistantWindow();
             this.Close();
             assistanWindow.ShowDialog();
         }

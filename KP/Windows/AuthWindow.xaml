@@ -7,7 +7,6 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Icon="F:\Opera загрузки\toothbrush-paste.png"
         Title="Авторизация" Height="700"  Width="550" MinHeight="650" MinWidth="450">
     <Grid  Cursor="Hand">
         <Canvas>
@@ -24,7 +23,7 @@
                     FontSize="14" 
                     Foreground="White" 
                     Cursor="Hand"/>
-            <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+            <Image Source="Resurs\toothbrush-paste.png" 
                    HorizontalAlignment="Center" 
                    Height="60" 
                    VerticalAlignment="Top"/>

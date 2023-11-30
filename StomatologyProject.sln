@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StomatologyProject", "KP\StomatologyProject.csproj", "{3EE63563-D668-447F-B2EA-EBEE50BC4277}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture", "Infrastucture\Infrastucture.csproj", "{F01C63CD-1A74-403B-8CEF-0EC69AC84379}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3EE63563-D668-447F-B2EA-EBEE50BC4277} = {3EE63563-D668-447F-B2EA-EBEE50BC4277}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

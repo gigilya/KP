@@ -6,11 +6,10 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Icon="F:\Opera загрузки\toothbrush-paste.png"
         Title="Главное меню" Width="550" Height="700" MinHeight="650" MinWidth="450">
     <Grid>
         <Canvas Height="60" VerticalAlignment="Top" Grid.ColumnSpan="4" >
-            <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+            <Image Source="Resurs\toothbrush-paste.png" 
                HorizontalAlignment="Center" 
                Height="60" 
                VerticalAlignment="Top"/>
@@ -26,7 +25,7 @@
         <StackPanel VerticalAlignment="Center">
             <Button x:Name="DoctorButton"
                 Click="DoctorButton_Click"
-                Content="Доктора"
+                Content="Врачи"
                 VerticalAlignment="Top" 
                 MinWidth="160" 
                 MaxWidth="400" 

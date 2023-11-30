@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Icon="F:\Opera загрузки\toothbrush-paste.png"
         Title="Создание пользователя" Height="800"  Width="550" MinHeight="750" MinWidth="450">
     <Grid  Cursor="Hand">
         <StackPanel Orientation="Vertical" Width="250" VerticalAlignment="Center">

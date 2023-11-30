@@ -17,9 +17,9 @@ namespace StomatologyProject.Windows
     /// <summary>
     /// Логика взаимодействия для AssistanWindow.xaml
     /// </summary>
-    public partial class AssistanWindow : Window
+    public partial class AssistantWindow : Window
     {
-        public AssistanWindow()
+        public AssistantWindow()
         {
             InitializeComponent();
         }
