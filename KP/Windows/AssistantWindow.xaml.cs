@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastucture.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace StomatologyProject.Windows
     /// </summary>
     public partial class AssistantWindow : Window
     {
+        private AssistantRepository _repository;
         public AssistantWindow()
         {
             InitializeComponent();
+            _repository = new AssistantRepository();
+            TableAssistant.ItemsSource = _repository.GetList();
         }
 
         private void MenuButton_Click(object sender, RoutedEventArgs e)

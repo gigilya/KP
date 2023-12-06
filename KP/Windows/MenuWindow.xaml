@@ -67,6 +67,15 @@
                 VerticalAlignment="Bottom" 
                 HorizontalAlignment="Center" 
                 Margin="10" Background="#FF698AFF" BorderBrush="#FF698AFF" FontFamily="Arial" FontSize="16"/>
+            <Button x:Name="SpecializationButton"
+                Click="SpecializationButton_Click"    
+                Content="Специальность"
+                MinWidth="160" 
+                MaxWidth="400" 
+                MinHeight="60" 
+                VerticalAlignment="Bottom" 
+                HorizontalAlignment="Center" 
+                Margin="10" Background="#FF698AFF" BorderBrush="#FF698AFF" FontFamily="Arial" FontSize="16"/>
         </StackPanel>
     </Grid>
 </Window>

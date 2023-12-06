@@ -64,14 +64,36 @@
   <ItemGroup>
     <Compile Include="AssistantEntity.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="Database\AssistantRepository.cs" />
+    <Compile Include="Database\DoctorRepository.cs" />
+    <Compile Include="Database\EntryRepository.cs" />
+    <Compile Include="Database\IBaseRepository .cs" />
+    <Compile Include="Database\PatientRepository.cs" />
+    <Compile Include="Database\ProcedureRepository.cs" />
+    <Compile Include="Database\SpecializationRepository.cs" />
+    <Compile Include="Database\UserRepository.cs" />
     <Compile Include="DoctorEntity.cs" />
     <Compile Include="EntryEntity.cs" />
+    <Compile Include="Mappers\AssistantMapper.cs" />
+    <Compile Include="Mappers\DoctorMapper.cs" />
+    <Compile Include="Mappers\EntryMapper.cs" />
+    <Compile Include="Mappers\PatientMapper.cs" />
+    <Compile Include="Mappers\ProcedureMapper.cs" />
+    <Compile Include="Mappers\SpecializationMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="PatientEntity.cs" />
     <Compile Include="ProcedureEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleEntity.cs" />
     <Compile Include="SpecializationEntity.cs" />
     <Compile Include="UserEntity.cs" />
+    <Compile Include="ViewModels\AssistantViewModel.cs" />
+    <Compile Include="ViewModels\DoctorViewModel.cs" />
+    <Compile Include="ViewModels\EntryViewModel.cs" />
+    <Compile Include="ViewModels\PatientViewModel.cs" />
+    <Compile Include="ViewModels\ProcedureViewModel.cs" />
+    <Compile Include="ViewModels\SpecializationViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

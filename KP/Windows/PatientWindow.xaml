@@ -38,13 +38,13 @@
                       MinWidth="450"
                       HorizontalAlignment="Center" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Фамилия" Binding="{Binding PatientLastName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Имя" Binding="{Binding PatientName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Отчество" Binding="{Binding PatientMiddleName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Пол" Binding="{Binding PatientGender}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Дата рождения" Binding="{Binding PatientBirthday}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Адрес" Binding="{Binding PatientAddress}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Контактная информация" Binding="{Binding PatientContactInfo}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Пол" Binding="{Binding Gender}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthday}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Адрес" Binding="{Binding Address}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Контактная информация" Binding="{Binding Contactinfo}" CanUserReorder="False"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">

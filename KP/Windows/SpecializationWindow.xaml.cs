@@ -1,5 +1,4 @@
 ﻿using Infrastucture.Database;
-using Infrastucture.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,18 +16,17 @@ using System.Windows.Shapes;
 namespace StomatologyProject.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для ProcedureWindow.xaml
+    /// Логика взаимодействия для SpecializationWindow.xaml
     /// </summary>
-    public partial class ProcedureWindow : Window
+    public partial class SpecializationWindow : Window
     {
-        private ProcedureRepository _repository;
-        public ProcedureWindow()
+        private SpecializationRepository _repository; 
+        public SpecializationWindow()
         {
             InitializeComponent();
-            _repository = new ProcedureRepository();
-            TableProcedure.ItemsSource = _repository.GetList();
+            _repository = new SpecializationRepository();
+            TableSpecialization.ItemsSource = _repository.GetList();
         }
-
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();

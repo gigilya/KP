@@ -10,7 +10,8 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Infrastucture.Database;
+
 
 namespace StomatologyProject.Windows
 {
@@ -19,9 +20,13 @@ namespace StomatologyProject.Windows
     /// </summary>
     public partial class PatientWindow : Window
     {
+        private PatientRepository _repository;
+
         public PatientWindow()
         {
             InitializeComponent();
+            _repository = new PatientRepository();
+            TablePatient.ItemsSource = _repository.GetList();
         }
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
@@ -29,5 +34,6 @@ namespace StomatologyProject.Windows
             this.Close();
             menuWindow.ShowDialog();
         }
+
     }
 }

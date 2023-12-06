@@ -58,5 +58,12 @@ namespace StomatologyProject.Windows
             this.Close();
             entryWindow.ShowDialog();
         }
+
+        private void SpecializationButton_Click(object sender, RoutedEventArgs e)
+        {
+            SpecializationWindow specializationWindow = new SpecializationWindow();
+            this.Close();
+            specializationWindow.ShowDialog();
+        }
     }
 }

@@ -38,11 +38,11 @@
                       MinWidth="450"
                       HorizontalAlignment="Center" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Фамилия" Binding="{Binding DoctorLastName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Имя" Binding="{Binding DoctorName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Отчество" Binding="{Binding DoctorMiddleName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Специализация" Binding="{Binding Specializationld}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Телефон" Binding="{Binding DoctorContactInfo}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Специализация" Binding="{Binding Specialization}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Телефон" Binding="{Binding Contactinfo}" CanUserReorder="False"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">

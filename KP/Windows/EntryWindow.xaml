@@ -39,12 +39,12 @@
                       HorizontalAlignment="Center" 
                       AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Фамилия" Binding="{Binding EntryLastName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Имя" Binding="{Binding EntryName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Отчество" Binding="{Binding EntryMiddleName}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Процедура" Binding="{Binding Procedureld}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Дата" Binding="{Binding EntryDateReceipt}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Статус" Binding="{Binding EntryStatusReceipt}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Процедура" Binding="{Binding Procedure}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Дата" Binding="{Binding Datereceipt}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Статус" Binding="{Binding Statusreceipt}" CanUserReorder="False"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
