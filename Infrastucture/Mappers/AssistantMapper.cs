@@ -34,7 +34,7 @@ namespace Infrastucture.Mappers
                 Lastname = entity.Lastname,
                 Middlename = entity.Middlename,
                 Contactinfo = entity.Contactinfo,
-                Specialization_ = entity.Specialization_,
+                Specialization_ = entity.Specialization_,   //возможно нужны изминения
             };
             return assistantEntity;
         }

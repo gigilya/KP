@@ -14,5 +14,6 @@ namespace Infrastucture.ViewModels
         public string Middlename { get; set; }
         public string Contactinfo { get; set; }
         public string Specialization { get; set; }
+        public virtual SpecializationEntity Specialization_ { get; set; }
     }
 }

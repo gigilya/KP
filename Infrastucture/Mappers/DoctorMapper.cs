@@ -27,5 +27,23 @@ namespace Infrastucture.Mappers
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
         }
+        public static DoctorEntity Map(DoctorViewModel entity)
+        {
+            var doctorEntity = new DoctorEntity
+            {
+                //Id = entity.Doctorld,
+                Name = entity.Name,
+                Lastname = entity.Lastname,
+                Middlename = entity.Middlename,
+                Contactinfo = entity.Contactinfo,
+                Specialization_ = entity.Specialization_,   //возможно нужны изминения
+            };
+            return doctorEntity;
+        }
+        public static List<DoctorEntity> Map(List<DoctorViewModel> entities)
+        {
+            var doctorEntity = entities.Select(x => Map(x)).ToList();
+            return doctorEntity;
+        }
     }
 }
