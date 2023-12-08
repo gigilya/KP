@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Infrastucture.Database
 {
-    internal interface IBaseRepository<TEntity>
+    public interface IBaseRepository<TEntity>
     {
         TEntity GetById(long id);
         List<TEntity> GetList();
-
+        TEntity Update(TEntity entity);
+        TEntity Delete(long id);
+        TEntity Add(TEntity entity);
     }
 }
