@@ -16,7 +16,7 @@ namespace Infrastucture.Mappers
                 Name = entity.Patient.Name,
                 Lastname = entity.Patient.Lastname,
                 Middlename = entity.Patient.Middlename,
-                Procedure = entity.Procedure.Proceduredescription,
+                Procedure = entity.Procedure,
                 Datereceipt = entity.Datereceipt,
                 Statusreceipt = entity.Statusreceipt,
 
@@ -27,6 +27,25 @@ namespace Infrastucture.Mappers
         {
             var viewModel = entities.Select(x => Map(x)).ToList();
             return viewModel;
+        }
+        public static EntryEntity Map(EntryViewModel entity)
+        {
+            var entryEntity = new EntryEntity
+            {
+                //Name = entity.Patient.Name,
+                //Lastname = entity.Patient.Lastname,
+                //Middlename = entity.Patient.Middlename,
+                Procedure = entity.Procedure,
+                Datereceipt = entity.Datereceipt,
+                Statusreceipt = entity.Statusreceipt,
+
+            };
+            return entryEntity;
+        }
+        public static List<EntryEntity> Map(List<EntryViewModel> entities) 
+        {
+            var entryEntity = entities.Select(x => Map(x)).ToList();
+            return entryEntity;
         }
     }
 }
