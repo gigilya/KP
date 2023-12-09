@@ -23,6 +23,21 @@ namespace Infrastucture.Mappers
         { 
             var viewModel = entities.Select(x => Map(x)).ToList();
             return viewModel;
+        }       
+        public static SpecializationEntity Map(SpecializationViewModel entity)
+        {
+            var specializationEntity = new SpecializationEntity
+            {
+                Name = entity.Name,
+                Wages = entity.Wages,
+                Workschedule = entity.Workschedule,
+            };
+            return specializationEntity;
+        }
+        public static List<SpecializationEntity> Map(List<SpecializationViewModel> entities) 
+        { 
+            var specializationEntity = entities.Select(x => Map(x)).ToList();
+            return specializationEntity;
         }
     }
 }
