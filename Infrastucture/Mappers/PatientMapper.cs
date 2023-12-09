@@ -22,7 +22,7 @@ namespace Infrastucture.Mappers
                 Address = entity.Address,
                 Contactinfo = entity.Contactinfo,
                 Userld = entity.Userld,
-                //UserName = entity.User.Login,
+                User = entity.User,
             };
             return viewModel;
         }
@@ -31,6 +31,29 @@ namespace Infrastucture.Mappers
         {
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
+        } 
+        public static PatientEntity Map(PatientViewModel entity)
+        {
+            var patientEntity = new PatientEntity
+            {
+               // Id = entity.Patientld,
+                Name = entity.Name,
+                Lastname = entity.Lastname,
+                Middlename = entity.Middlename,
+                Gender = entity.Gender,
+                Birthday = entity.Birthday,
+                Address = entity.Address,
+                Contactinfo = entity.Contactinfo,
+                Userld = entity.Userld,
+                User = entity.User,
+            };
+            return patientEntity;
+        }
+
+        public static List<PatientEntity> Map(List<PatientViewModel> entities)
+        {
+            var patientEntitys = entities.Select(x => Map(x)).ToList();
+            return patientEntitys;
         }
 
     }

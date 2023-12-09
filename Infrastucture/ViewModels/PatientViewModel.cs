@@ -17,6 +17,6 @@ namespace Infrastucture.ViewModels
         public string Birthday { get; set; }
         public string Address { get; set; }
         public string Contactinfo { get; set; }
-       // public string UserName {  get; set; } 
+        public virtual UserEntity User { get; set; }
     }
 }
