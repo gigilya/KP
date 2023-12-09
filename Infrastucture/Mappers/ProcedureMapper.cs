@@ -21,6 +21,23 @@ namespace Infrastucture.Mappers
             };
             return viewModel;
         }
+        public static List<ProcedureEntity> Map(List<ProcedureViewModel> entities)
+        {
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
+        }        
+        public static ProcedureEntity Map(ProcedureViewModel entity)
+        {
+            var procedureEntity = new ProcedureEntity()
+            {
+                Procedureld = entity.Id,
+                Doctor = entity.Doctor,
+                Assistant_ = entity.Assistant_,
+                Proceduredescription = entity.Description,
+                Price = entity.Price,
+            };
+            return procedureEntity;
+        }
         public static List<ProcedureViewModel> Map(List<ProcedureEntity> entities)
         {
             var viewModels = entities.Select(x => Map(x)).ToList();

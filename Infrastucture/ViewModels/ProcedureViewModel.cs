@@ -13,6 +13,9 @@ namespace Infrastucture.ViewModels
         public string Assistantfio { get; set; }
         public string Description { get; set; }
         public long Price { get; set; }
+        public virtual AssistantEntity Assistant_ { get; set; }
+
+        public virtual DoctorEntity Doctor { get; set; }
 
     }
 }
