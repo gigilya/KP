@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastucture.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,15 +16,17 @@ using System.Windows.Shapes;
 namespace StomatologyProject.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для AssistanWindow.xaml
+    /// Логика взаимодействия для SpecializationWindow.xaml
     /// </summary>
-    public partial class AssistanWindow : Window
+    public partial class SpecializationWindow : Window
     {
-        public AssistanWindow()
+        private SpecializationRepository _repository; 
+        public SpecializationWindow()
         {
             InitializeComponent();
+            _repository = new SpecializationRepository();
+            TableSpecialization.ItemsSource = _repository.GetList();
         }
-
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();

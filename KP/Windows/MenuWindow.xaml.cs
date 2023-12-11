@@ -33,7 +33,7 @@ namespace StomatologyProject.Windows
 
         private void AssistanButton_Click(object sender, RoutedEventArgs e)
         {
-            AssistanWindow assistanWindow = new AssistanWindow();
+            AssistantWindow assistanWindow = new AssistantWindow();
             this.Close();
             assistanWindow.ShowDialog();
         }
@@ -57,6 +57,13 @@ namespace StomatologyProject.Windows
             EntryWindow entryWindow = new EntryWindow();
             this.Close();
             entryWindow.ShowDialog();
+        }
+
+        private void SpecializationButton_Click(object sender, RoutedEventArgs e)
+        {
+            SpecializationWindow specializationWindow = new SpecializationWindow();
+            this.Close();
+            specializationWindow.ShowDialog();
         }
     }
 }

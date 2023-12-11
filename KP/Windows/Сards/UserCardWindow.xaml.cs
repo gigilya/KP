@@ -1,6 +1,4 @@
-﻿using Infrastucture.Database;
-using Infrastucture.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,19 +15,15 @@ using System.Windows.Shapes;
 namespace StomatologyProject.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для ProcedureWindow.xaml
+    /// Логика взаимодействия для CardWindow.xaml
     /// </summary>
-    public partial class ProcedureWindow : Window
+    public partial class UserCardWindow : Window
     {
-        private ProcedureRepository _repository;
-        public ProcedureWindow()
+        public UserCardWindow()
         {
             InitializeComponent();
-            _repository = new ProcedureRepository();
-            TableProcedure.ItemsSource = _repository.GetList();
         }
-
-        private void MenuButton_Click(object sender, RoutedEventArgs e)
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();
             this.Close();

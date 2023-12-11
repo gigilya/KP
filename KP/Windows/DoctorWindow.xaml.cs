@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Infrastucture.Database;
+using Infrastucture.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,12 @@ namespace StomatologyProject.Windows
     /// </summary>
     public partial class DoctorWindow : Window
     {
+        private DoctorRepository _repository;
         public DoctorWindow()
         {
             InitializeComponent();
+            _repository = new DoctorRepository();
+            TableDoctor.ItemsSource = _repository.GetList();
         }
 
         private void MenuButton_Click(object sender, RoutedEventArgs e)

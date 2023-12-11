@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Icon="F:\Opera загрузки\toothbrush-paste.png"
         Title="Пациенты" Height="700" Width="700" MinHeight="650" MinWidth="700">
     <Grid>
         <StackPanel>
@@ -18,9 +17,9 @@
                         Canvas.Top="20" 
                         Cursor="Hand" 
                         Foreground="#FF698AFF">
-                    <Image Source="F:\Opera загрузки\arrow-left.png" />
+                    <Image Source="Resurs\arrow-left.png" />
                 </Button>
-                <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
+                <Image Source="Resurs\toothbrush-paste.png" 
                        HorizontalAlignment="Center" 
                        Height="60" 
                        VerticalAlignment="Top"/>
@@ -37,15 +36,15 @@
                       Style="{StaticResource MaterialDesignDataGrid}"
                       MinHeight="450"
                       MinWidth="450"
-                      HorizontalAlignment="Center">
+                      HorizontalAlignment="Center" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Фамилия"/>
-                    <DataGridTextColumn Header="Имя"/>
-                    <DataGridTextColumn Header="Отчество"/>
-                    <DataGridTextColumn Header="Пол"/>
-                    <DataGridTextColumn Header="Дата рождения"/>
-                    <DataGridTextColumn Header="Адрес"/>
-                    <DataGridTextColumn Header="Контактная информация"/>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Пол" Binding="{Binding Gender}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthday}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Адрес" Binding="{Binding Address}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Контактная информация" Binding="{Binding Contactinfo}" CanUserReorder="False"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">
