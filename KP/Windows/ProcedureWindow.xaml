@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        Icon="F:\Opera загрузки\toothbrush-paste.png"
         Title="Процедуры" Height="700" Width="550" MinHeight="650" MinWidth="500">
     <Grid>
         <StackPanel>
@@ -17,12 +18,12 @@
                         Canvas.Top="20" 
                         Cursor="Hand" 
                         Foreground="#FF698AFF">
-                    <Image Source="Resurs\arrow-left.png" />
+                    <Image Source="F:\Opera загрузки\arrow-left.png" />
                 </Button>
-                <Image Source="Resurs\toothbrush-paste.png" 
+                <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
                        HorizontalAlignment="Center" 
                        Height="60" 
-                       VerticalAlignment="Top"/>
+                       VerticalAlignment="Top"/>    
                 <Label Content="Клуб зубастиков" 
                        Canvas.Left="65" 
                        Canvas.Top="18" 
@@ -32,16 +33,16 @@
                        FontFamily="Arial" 
                        FontWeight="Bold"/>
             </Canvas>
-            <DataGrid x:Name="TableProcedure" 
+            <DataGrid x:Name="TablePatient" 
                       Style="{StaticResource MaterialDesignDataGrid}"
                       MinHeight="450"
                       MinWidth="450"
-                      HorizontalAlignment="Center" AutoGenerateColumns="False">
+                      HorizontalAlignment="Center">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ФИО врача" Binding="{Binding Doctorfio}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Фио ассистента" Binding="{Binding Assistantfio}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Наименование" Binding="{Binding Description}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Цена" Binding="{Binding Price}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Логин врача"/>
+                    <DataGridTextColumn Header="Логин ассистента"/>
+                    <DataGridTextColumn Header="Наименование"/>
+                    <DataGridTextColumn Header="Цена"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">

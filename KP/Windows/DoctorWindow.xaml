@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        Icon="F:\Opera загрузки\toothbrush-paste.png"
         Title="Врачи" Height="700" Width="550" MinHeight="650" MinWidth="500">
     <Grid>
         <StackPanel>
@@ -17,9 +18,9 @@
                         Canvas.Top="20" 
                         Cursor="Hand" 
                         Foreground="#FF698AFF">
-                    <Image Source="Resurs\arrow-left.png" />
+                    <Image Source="F:\Opera загрузки\arrow-left.png" />
                 </Button>
-                <Image Source="Resurs\toothbrush-paste.png" 
+                <Image Source="F:\Opera загрузки\toothbrush-paste.png" 
                        HorizontalAlignment="Center" 
                        Height="60" 
                        VerticalAlignment="Top"/>
@@ -36,13 +37,13 @@
                       Style="{StaticResource MaterialDesignDataGrid}"
                       MinHeight="450"
                       MinWidth="450"
-                      HorizontalAlignment="Center" AutoGenerateColumns="False">
+                      HorizontalAlignment="Center">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Специализация" Binding="{Binding Specialization}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Телефон" Binding="{Binding Contactinfo}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Фамилия"/>
+                    <DataGridTextColumn Header="Имя"/>
+                    <DataGridTextColumn Header="Отчество"/>
+                    <DataGridTextColumn Header="Специализация"/>
+                    <DataGridTextColumn Header="Телефон"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">

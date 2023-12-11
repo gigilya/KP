@@ -23,7 +23,7 @@ namespace Infrastucture
         public long Userld { get; set; }
 
         [Column("last_name")]
-        public string Lastname { get; set; }
+        public long Lastname { get; set; }
 
         [Required]
         [StringLength(2147483647)]

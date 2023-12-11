@@ -1,5 +1,4 @@
-﻿using Infrastucture.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +19,9 @@ namespace StomatologyProject.Windows
     /// </summary>
     public partial class EntryWindow : Window
     {
-        private EntryRepository _repository;
         public EntryWindow()
         {
             InitializeComponent();
-            _repository = new EntryRepository();
-            TableEntry.ItemsSource = _repository.GetList();
         }
 
         private void MenuButton_Click(object sender, RoutedEventArgs e)

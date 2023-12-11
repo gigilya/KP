@@ -6,7 +6,7 @@ namespace Infrastucture
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Assistant ")]
+    [Table("Assistant")]
     public partial class AssistantEntity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -16,7 +16,7 @@ namespace Infrastucture
         }
 
         [Key]
-        [Column("id_assistant ")]
+        [Column("id_assistant")]
         public long Assistantld { get; set; }
 
         [Required]
