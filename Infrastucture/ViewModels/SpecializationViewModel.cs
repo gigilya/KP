@@ -11,5 +11,7 @@ namespace Infrastucture.ViewModels
         public string Name { get; set; }
         public long Wages { get; set; }
         public string Workschedule { get; set; }
+        public List<AssistantEntity> Assistant_ { get; set;}
+        public List<DoctorEntity> Doctor { get; set;}
     }
 }

@@ -35,5 +35,10 @@ namespace StomatologyProject.Windows
             this.Close();
             menuWindow.ShowDialog();
         }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

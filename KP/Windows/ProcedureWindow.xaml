@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Процедуры" Height="700" Width="550" MinHeight="650" MinWidth="500">
+        Title="Процедуры" Height="700" Width="900" MinHeight="650" MinWidth="900">
     <Grid>
         <StackPanel>
             <Canvas Height="100">
@@ -38,8 +38,12 @@
                       MinWidth="450"
                       HorizontalAlignment="Center" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ФИО врача" Binding="{Binding Doctorfio}" CanUserReorder="False"/>
-                    <DataGridTextColumn Header="Фио ассистента" Binding="{Binding Assistantfio}" CanUserReorder="False"/>
+                    <DataGridTextColumn Binding="{Binding Doctor.Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="ФИО Врача" Binding="{Binding Doctor.Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Binding="{Binding Doctor.Middlename}" CanUserReorder="False"/>
+                    <DataGridTextColumn Binding="{Binding Assistant_.Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Фио Ассистента" Binding="{Binding Assistant_.Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Binding="{Binding Assistant_.Middlename}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Наименование" Binding="{Binding Description}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Цена" Binding="{Binding Price}" CanUserReorder="False"/>
                 </DataGrid.Columns>

@@ -14,6 +14,7 @@ namespace Infrastucture.Mappers
             var viewModel = new DoctorViewModel
             {
                 Id = entity.Doctorld,
+                User = entity.User,
                 Name = entity.Name,
                 Lastname = entity.Lastname,
                 Middlename = entity.Middlename,
@@ -31,7 +32,8 @@ namespace Infrastucture.Mappers
         {
             var doctorEntity = new DoctorEntity
             {
-                //Id = entity.Doctorld,
+                Doctorld = entity.Id,
+                User = entity.User,
                 Name = entity.Name,
                 Lastname = entity.Lastname,
                 Middlename = entity.Middlename,

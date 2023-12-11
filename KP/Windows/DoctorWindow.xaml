@@ -38,6 +38,8 @@
                       MinWidth="450"
                       HorizontalAlignment="Center" AutoGenerateColumns="False">
                 <DataGrid.Columns>
+                    <DataGridTextColumn Header="№" Binding="{Binding Id}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Логин" Binding="{Binding User.Login}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
@@ -62,6 +64,7 @@
                         FontSize="14"/>
                 <Button x:Name="UpdateButton"
                         Content="Обновить"
+                        Click="UpdateButton_Click"
                         HorizontalAlignment="Right"
                         Background="#FF698AFF" 
                         BorderBrush="#FF698AFF" 

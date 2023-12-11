@@ -14,10 +14,11 @@ namespace Infrastucture.Mappers
             var viewModel = new ProcedureViewModel()
             {
                 Id = entity.Procedureld,
-                Doctorfio = entity.Doctor.Lastname,
-                Assistantfio = entity.Assistant_.Lastname,
                 Description = entity.Proceduredescription,
                 Price = entity.Price,
+                Doctor = entity.Doctor,
+                Assistant_ = entity.Assistant_,
+                Entry = entity.Entry.ToList()
             };
             return viewModel;
         }
@@ -31,10 +32,11 @@ namespace Infrastucture.Mappers
             var procedureEntity = new ProcedureEntity()
             {
                 Procedureld = entity.Id,
-                Doctor = entity.Doctor,
-                Assistant_ = entity.Assistant_,
                 Proceduredescription = entity.Description,
                 Price = entity.Price,
+                Doctor = entity.Doctor,
+                Assistant_ = entity.Assistant_,
+                Entry = entity.Entry
             };
             return procedureEntity;
         }

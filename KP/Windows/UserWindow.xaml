@@ -51,8 +51,8 @@
                          FontSize="14"
                          DataContext="Введите пароль"
                          Margin="0,0,0,30"/>
-            <Button x:Name="GuestButton"
-                    Click="GuestButton_Click"
+            <Button x:Name="LoginButton"
+                    Click="LoginButton_Click"
                     Content="Войти" 
                     Background="#FF698AFF" 
                     FontFamily="Arial" 

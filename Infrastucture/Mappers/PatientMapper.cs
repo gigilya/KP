@@ -17,7 +17,7 @@ namespace Infrastucture.Mappers
                 Name = entity.Name,
                 Lastname = entity.Lastname,
                 Middlename = entity.Middlename,
-                Gender = entity.Gender,
+                Gender = entity.Gender == "М" ? "мужской" : "женский",
                 Birthday = entity.Birthday,
                 Address = entity.Address,
                 Contactinfo = entity.Contactinfo,

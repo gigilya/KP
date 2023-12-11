@@ -13,9 +13,7 @@ namespace Infrastucture.Mappers
         {
             var entryViewModel = new EntryViewModel
             {
-                Name = entity.Patient.Name,
-                Lastname = entity.Patient.Lastname,
-                Middlename = entity.Patient.Middlename,
+                Patient = entity.Patient,
                 Procedure = entity.Procedure,
                 Datereceipt = entity.Datereceipt,
                 Statusreceipt = entity.Statusreceipt,
@@ -32,9 +30,7 @@ namespace Infrastucture.Mappers
         {
             var entryEntity = new EntryEntity
             {
-                //Name = entity.Patient.Name,
-                //Lastname = entity.Patient.Lastname,
-                //Middlename = entity.Patient.Middlename,
+                Patient = entity.Patient,
                 Procedure = entity.Procedure,
                 Datereceipt = entity.Datereceipt,
                 Statusreceipt = entity.Statusreceipt,

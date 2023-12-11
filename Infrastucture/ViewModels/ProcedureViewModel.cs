@@ -9,13 +9,11 @@ namespace Infrastucture.ViewModels
     public class ProcedureViewModel
     {
         public long Id { get; set; }
-        public string Doctorfio { get; set; }
-        public string Assistantfio { get; set; }
         public string Description { get; set; }
         public long Price { get; set; }
-        public virtual AssistantEntity Assistant_ { get; set; }
-
-        public virtual DoctorEntity Doctor { get; set; }
+        public AssistantEntity Assistant_ { get; set; }
+        public DoctorEntity Doctor { get; set; }
+        public List<EntryEntity> Entry { get; set; }
 
     }
 }
