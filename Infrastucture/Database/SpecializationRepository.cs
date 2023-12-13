@@ -15,7 +15,7 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                var items = context.Specialization_.ToList();
+                var items = context.Specialization.ToList();
                 return SpecializationMapper.Map(items);
             }
         }
@@ -23,7 +23,7 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                var item = context.Specialization_.FirstOrDefault(x => x.Specializationld == id);
+                var item = context.Specialization.FirstOrDefault(x => x.Specializationld == id);
                 return SpecializationMapper.Map(item);
             }
         }
@@ -31,13 +31,13 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                int countG = context.Specialization_.ToList().Count;
+                int countG = context.Specialization.ToList().Count;
 
-                context.Specialization_.AddOrUpdate(SpecializationMapper.Map(entry));
+                context.Specialization.AddOrUpdate(SpecializationMapper.Map(entry));
 
-                if (context.Specialization_.ToList().Count != countG)
+                if (context.Specialization.ToList().Count != countG)
                 {
-                    Delete(context.Specialization_.Last().Specializationld);
+                    Delete(context.Specialization.Last().Specializationld);
                     return null;
                 }
                 else
@@ -51,7 +51,7 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                if (context.Specialization_.Remove(context.Specialization_.Find(id)) == null)
+                if (context.Specialization.Remove(context.Specialization.Find(id)) == null)
                 {
                     return null;
                 }
@@ -68,7 +68,7 @@ namespace Infrastucture.Database
             {
                 SpecializationEntity specialisationEntity = SpecializationMapper.Map(entry);
 
-                if (context.Specialization_.Add(specialisationEntity) == null)
+                if (context.Specialization.Add(specialisationEntity) == null)
                 {
                     return null;
                 }

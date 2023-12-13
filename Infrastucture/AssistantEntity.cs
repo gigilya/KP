@@ -6,7 +6,7 @@ namespace Infrastucture
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Assistant ")]
+    [Table("Assistant")]
     public partial class AssistantEntity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -16,7 +16,7 @@ namespace Infrastucture
         }
 
         [Key]
-        [Column("id_assistant ")]
+        [Column("id_assistant")]
         public long Assistantld { get; set; }
 
         [Required]
@@ -41,7 +41,7 @@ namespace Infrastucture
         [Column("contact_info")]
         public string Contactinfo { get; set; }
 
-        public virtual SpecializationEntity Specialization_ { get; set; }
+        public virtual SpecializationEntity Specialization { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProcedureEntity> Procedure { get; set; }

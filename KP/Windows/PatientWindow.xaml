@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Пациенты" Height="700" Width="700" MinHeight="650" MinWidth="700">
+        Title="Пациенты" Height="700" Width="1025" MinHeight="650" MinWidth="1010">
     <Grid>
         <StackPanel>
             <Canvas Height="100">
@@ -32,12 +32,17 @@
                        FontFamily="Arial" 
                        FontWeight="Bold"/>
             </Canvas>
+            <StackPanel Orientation="Horizontal">
             <DataGrid x:Name="TablePatient" 
                       Style="{StaticResource MaterialDesignDataGrid}"
                       MinHeight="450"
-                      MinWidth="450"
-                      HorizontalAlignment="Center" AutoGenerateColumns="False">
+                      MinWidth="650"
+                      HorizontalAlignment="Center" 
+                      AutoGenerateColumns="False"
+                      Margin="10,0,0,0">
                 <DataGrid.Columns>
+                     <DataGridTextColumn Header="№" Binding="{Binding Id}" CanUserReorder="False" IsReadOnly="True"/>
+                     <DataGridTextColumn Header="Логин" Binding="{Binding User.Login}" CanUserReorder="False" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
@@ -47,6 +52,17 @@
                     <DataGridTextColumn Header="Контактная информация" Binding="{Binding Contactinfo}" CanUserReorder="False"/>
                 </DataGrid.Columns>
             </DataGrid>
+                <Button x:Name="Return_Button" 
+                        Click="Return_Button_Click"
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        FontFamily="Arial" 
+                        Cursor="Hand" 
+                        Foreground="#FF698AFF"
+                        VerticalAlignment="Top"
+                        Margin="5,0,0,0">
+                    <Image Source="Resurs\arrow-u-left-bottom.png"/>
+                </Button>
+            </StackPanel>
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">
                 <Button x:Name="AddButton"
                         Content="Добавить" 
@@ -56,6 +72,7 @@
                         FontFamily="Arial"
                         FontSize="14"/>
                 <Button x:Name="DeletButton"
+                        Click="DeletButton_Click"
                         Content="Удалить" 
                         HorizontalAlignment="Center" 
                         Background="#FF698AFF" 
@@ -63,6 +80,7 @@
                         FontFamily="Arial" 
                         FontSize="14"/>
                 <Button x:Name="UpdateButton"
+                        Click="UpdateButton_Click"
                         Content="Обновить"
                         HorizontalAlignment="Right"
                         Background="#FF698AFF" 

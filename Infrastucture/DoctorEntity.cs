@@ -46,7 +46,7 @@ namespace Infrastucture
 
         public virtual UserEntity User { get; set; }
 
-        public virtual SpecializationEntity Specialization_ { get; set; }
+        public virtual SpecializationEntity Specialization { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProcedureEntity> Procedure { get; set; }

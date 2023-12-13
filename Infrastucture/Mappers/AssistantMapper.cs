@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Infrastucture.Mappers
@@ -13,11 +14,12 @@ namespace Infrastucture.Mappers
         {
             var viewModel = new AssistantViewModel 
             { 
+                Id = entity.Assistantld,
                 Name = entity.Name,
                 Lastname = entity.Lastname,
                 Middlename = entity.Middlename,
                 Contactinfo = entity.Contactinfo,
-                Specialization = entity.Specialization_.Name,
+                Specialization = entity.Specialization,
             };
             return viewModel;
         }
@@ -30,11 +32,11 @@ namespace Infrastucture.Mappers
         {
             var assistantEntity = new AssistantEntity 
             { 
-                Name = entity.Name,
-                Lastname = entity.Lastname,
-                Middlename = entity.Middlename,
-                Contactinfo = entity.Contactinfo,
-                Specialization_ = entity.Specialization_,   //возможно нужны изминения
+                Assistantld = entity.Id,
+                Name = Regex.IsMatch(entity.Name, @"^[а-яА-я]+$") == true ? entity.Name.Trim() : throw new Exception("Name"),
+                Middlename = Regex.IsMatch(entity.Middlename, @"^[а-яА-я]+$") == true ? entity.Middlename.Trim() : throw new Exception("Name"),
+                Contactinfo = Regex.IsMatch(entity.Contactinfo, @"[7,8]{1}\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}") == true ? entity.Contactinfo : throw new Exception("Contactinfo"),
+                Specialization = entity.Specialization,
             };
             return assistantEntity;
         }

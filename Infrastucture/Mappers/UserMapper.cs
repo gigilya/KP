@@ -24,5 +24,20 @@ namespace Infrastucture.Mappers
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
         }
+        public static UserEntity Map(UserViewModel entity)
+        {
+            var viewModel = new UserEntity
+            {
+                Userld = entity.Id,
+                Login = entity.Login,
+                Password = entity.Passworded     
+            };
+            return viewModel;
+        }
+        public static List<UserEntity> Map(List<UserViewModel> entities)
+        {
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
+        }
     }
 }

@@ -12,20 +12,20 @@ namespace Infrastucture
         {
         }
 
-        public virtual DbSet<AssistantEntity> Assistant_ { get; set; }
+        public virtual DbSet<AssistantEntity> Assistant { get; set; }
         public virtual DbSet<DoctorEntity> Doctor { get; set; }
         public virtual DbSet<EntryEntity> Entry { get; set; }
         public virtual DbSet<PatientEntity> Patient { get; set; }
         public virtual DbSet<ProcedureEntity> Procedure { get; set; }
         public virtual DbSet<RoleEntity> Role { get; set; }
-        public virtual DbSet<SpecializationEntity> Specialization_ { get; set; }
+        public virtual DbSet<SpecializationEntity> Specialization { get; set; }
         public virtual DbSet<UserEntity> User { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AssistantEntity>()
                 .HasMany(e => e.Procedure)
-                .WithRequired(e => e.Assistant_)
+                .WithRequired(e => e.Assistant)
                 .HasForeignKey(e => e.Assistantld)
                 .WillCascadeOnDelete(false);
 
@@ -50,14 +50,14 @@ namespace Infrastucture
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<SpecializationEntity>()
-                .HasMany(e => e.Assistant_)
-                .WithRequired(e => e.Specialization_)
+                .HasMany(e => e.Assistant)
+                .WithRequired(e => e.Specialization)
                 .HasForeignKey(e => e.Specializationld)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<SpecializationEntity>()
                 .HasMany(e => e.Doctor)
-                .WithRequired(e => e.Specialization_)
+                .WithRequired(e => e.Specialization)
                 .HasForeignKey(e => e.Specializationld)
                 .WillCascadeOnDelete(false);
 

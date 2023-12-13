@@ -15,7 +15,7 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                var items = context.Assistant_.ToList();
+                var items = context.Assistant.ToList();
                 return AssistantMapper.Map(items);
             }
         }
@@ -23,7 +23,7 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                var item = context.Assistant_.FirstOrDefault(x => x.Assistantld == id);
+                var item = context.Assistant.FirstOrDefault(x => x.Assistantld == id);
                 return AssistantMapper.Map(item);
             }
         }
@@ -31,13 +31,13 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                int countG = context.Assistant_.ToList().Count;
+                int countG = context.Assistant.ToList().Count;
 
-                context.Assistant_.AddOrUpdate(AssistantMapper.Map(assistant));
+                context.Assistant.AddOrUpdate(AssistantMapper.Map(assistant));
 
-                if (context.Assistant_.ToList().Count != countG)
+                if (context.Assistant.ToList().Count != countG)
                 {
-                    Delete(context.Assistant_.Last().Assistantld);
+                    Delete(context.Assistant.Last().Assistantld);
                     return null;
                 }
                 else
@@ -51,7 +51,7 @@ namespace Infrastucture.Database
         {
             using (var context = new Context())
             {
-                if (context.Assistant_.Remove(context.Assistant_.Find(id)) == null)
+                if (context.Assistant.Remove(context.Assistant.Find(id)) == null)
                 {
                     return null;
                 }
@@ -69,7 +69,7 @@ namespace Infrastucture.Database
             {
                 AssistantEntity assistantEntity = AssistantMapper.Map(assistant);
 
-                if (context.Assistant_.Add(assistantEntity) == null)
+                if (context.Assistant.Add(assistantEntity) == null)
                 {
                     return null;
                 }

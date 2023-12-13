@@ -12,7 +12,7 @@ namespace Infrastucture
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SpecializationEntity()
         {
-            Assistant_ = new HashSet<AssistantEntity>();
+            Assistant = new HashSet<AssistantEntity>();
             Doctor = new HashSet<DoctorEntity>();
         }
 
@@ -34,7 +34,7 @@ namespace Infrastucture
         public string Workschedule { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssistantEntity> Assistant_ { get; set; }
+        public virtual ICollection<AssistantEntity> Assistant { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DoctorEntity> Doctor { get; set; }

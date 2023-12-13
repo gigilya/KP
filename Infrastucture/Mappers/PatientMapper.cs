@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Infrastucture.Mappers
@@ -13,7 +14,7 @@ namespace Infrastucture.Mappers
         {
             var viewModel = new PatientViewModel
             {
-               // Id = entity.Patientld,
+                Id = entity.Patientld,
                 Name = entity.Name,
                 Lastname = entity.Lastname,
                 Middlename = entity.Middlename,
@@ -36,14 +37,14 @@ namespace Infrastucture.Mappers
         {
             var patientEntity = new PatientEntity
             {
-               // Id = entity.Patientld,
-                Name = entity.Name,
-                Lastname = entity.Lastname,
-                Middlename = entity.Middlename,
-                Gender = entity.Gender,
+                Patientld = entity.Id,
+                Lastname = Regex.IsMatch(entity.Lastname, @"^[а-яА-я]+$") == true ? entity.Lastname.Trim() : throw new Exception("Name"),
+                Name = Regex.IsMatch(entity.Name, @"^[а-яА-я]+$") == true ? entity.Name.Trim() : throw new Exception("Name"),
+                Middlename = Regex.IsMatch(entity.Middlename, @"^[а-яА-я]+$") == true ? entity.Middlename.Trim() : throw new Exception("Name"),
+                Gender = entity.Gender == "мужской" ? "м" : entity.Gender == "женский" ? "ж" : throw new Exception("Gender"),
                 Birthday = entity.Birthday,
                 Address = entity.Address,
-                Contactinfo = entity.Contactinfo,
+                Contactinfo = Regex.IsMatch(entity.Contactinfo, @"[7,8]{1}\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}") == true ? entity.Contactinfo : throw new Exception("Contactinfo"),
                 Userld = entity.Userld,
                 User = entity.User,
             };

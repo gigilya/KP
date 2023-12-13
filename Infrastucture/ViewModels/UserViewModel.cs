@@ -11,5 +11,7 @@ namespace Infrastucture.ViewModels
         public long Id { get; set; }
         public string Login {  get; set; }
         public string Passworded { get; set; }
+        public List<DoctorEntity> Doctor { get; set; }
+        public List<AssistantEntity> Assistant_ { get; set; }
     }
 }

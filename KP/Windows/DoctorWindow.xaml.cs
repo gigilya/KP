@@ -21,12 +21,18 @@ namespace StomatologyProject.Windows
     /// </summary>
     public partial class DoctorWindow : Window
     {
-        private DoctorRepository _repository;
+        private DoctorRepository doctors;
+        private UserRepository users;
         public DoctorWindow()
         {
             InitializeComponent();
-            _repository = new DoctorRepository();
-            TableDoctor.ItemsSource = _repository.GetList();
+            doctors = new DoctorRepository();
+            users = new UserRepository();
+            TableDoctor.ItemsSource = doctors.GetList();
+        }
+        private void Updating()
+        {
+            TableDoctor.ItemsSource = doctors.GetList();
         }
 
         private void MenuButton_Click(object sender, RoutedEventArgs e)
@@ -38,7 +44,51 @@ namespace StomatologyProject.Windows
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
+            List<long> list = new List<long>();
+            foreach (DoctorViewModel item in TableDoctor.ItemsSource)
+            {
+                try
+                {
+                    list.Add(item.Id);
+                    doctors.Update(item);
+                }
+                catch (Exception ex)
+                {
+                    if (ex.Message == "Name")
+                    {
+                        MessageBox.Show($"Некорректно введено поле ФИО у записи под номером {item.Id}", "Ошибка ввода", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else if (ex.Message == "Contactinfo")
+                    {
+                        MessageBox.Show($"Некорректно введено поле номера телефона у записи под номером {item.Id}", "Ошибка ввода", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"У записи под номером {item.Id} введены данные некорректно", "Ошибка ввода", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            if (list.Count > 0)
+            {
+                MessageBox.Show($"Обновление прошло успешно!\nОбновлённые записи {string.Join(",", list)}.", "База данных", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 
+        }
+        private void DeletButton_Click(object sender, RoutedEventArgs e)
+        {
+            DoctorViewModel doctorM = TableDoctor.SelectedItem as DoctorViewModel;
+            if (doctorM == null) return;
+            try
+            {
+                doctors.Delete(doctorM.Id);
+                MessageBox.Show($"Удаление записи под номером {doctorM.Id} прошло успешно", "База данных", MessageBoxButton.OK, MessageBoxImage.Error);
+                Updating();
+            }
+            catch {MessageBox.Show($"Удаление записи не может быть осуществлено", "База данных", MessageBoxButton.OK, MessageBoxImage.Error);}
+        }
+        private void Return_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Updating();
         }
     }
 }

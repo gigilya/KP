@@ -17,7 +17,7 @@ namespace Infrastucture.Mappers
                 Description = entity.Proceduredescription,
                 Price = entity.Price,
                 Doctor = entity.Doctor,
-                Assistant_ = entity.Assistant_,
+                Assistant = entity.Assistant,
                 Entry = entity.Entry.ToList()
             };
             return viewModel;
@@ -35,7 +35,7 @@ namespace Infrastucture.Mappers
                 Proceduredescription = entity.Description,
                 Price = entity.Price,
                 Doctor = entity.Doctor,
-                Assistant_ = entity.Assistant_,
+                Assistant = entity.Assistant,
                 Entry = entity.Entry
             };
             return procedureEntity;

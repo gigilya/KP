@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StomatologyProject.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Приём" Height="700"  Width="550" MinHeight="650" MinWidth="550">
+        Title="Запись" Height="700"  Width="550" MinHeight="650" MinWidth="550">
     <Grid>
         <StackPanel>
             <Canvas Height="100">

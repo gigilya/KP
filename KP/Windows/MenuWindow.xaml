@@ -60,7 +60,7 @@
                 Margin="10" Background="#FF698AFF" BorderBrush="#FF698AFF" FontFamily="Arial" FontSize="16"/>
             <Button x:Name="EntryButton"
                 Click="EntryButton_Click"    
-                Content="Приём"
+                Content="Запись"
                 MinWidth="160" 
                 MaxWidth="400" 
                 MinHeight="60" 

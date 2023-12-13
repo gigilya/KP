@@ -33,7 +33,7 @@ namespace Infrastucture
         [Column("price")]
         public long Price { get; set; }
 
-        public virtual AssistantEntity Assistant_ { get; set; }
+        public virtual AssistantEntity Assistant { get; set; }
 
         public virtual DoctorEntity Doctor { get; set; }
 

@@ -8,12 +8,12 @@ namespace Infrastucture.ViewModels
 {
     public class AssistantViewModel
     {
+        public long Id { get; set; }
         public string Lastname { get; set; }
         public string Name { get; set; }
         public string Middlename { get; set; }
         public string Contactinfo { get; set; }
-        public string Specialization { get; set; }
-        public virtual SpecializationEntity Specialization_ { get; set; }
+        public SpecializationEntity Specialization { get; set; }
         public List<ProcedureEntity> Procedure { get; set; }
     }
 }

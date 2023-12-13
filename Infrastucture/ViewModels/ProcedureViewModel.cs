@@ -11,7 +11,7 @@ namespace Infrastucture.ViewModels
         public long Id { get; set; }
         public string Description { get; set; }
         public long Price { get; set; }
-        public AssistantEntity Assistant_ { get; set; }
+        public AssistantEntity Assistant { get; set; }
         public DoctorEntity Doctor { get; set; }
         public List<EntryEntity> Entry { get; set; }
 
