@@ -15,25 +15,13 @@ using System.Windows.Shapes;
 namespace StomatologyProject.Windows.Cards
 {
     /// <summary>
-    /// Логика взаимодействия для AssistantCard.xaml
+    /// Логика взаимодействия для DoctorCard.xaml
     /// </summary>
-    public partial class AssistantCard : Window
+    public partial class DoctorCard : Window
     {
-        public AssistantCard()
+        public DoctorCard()
         {
             InitializeComponent();
-        }
-
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CancleButton_Click(object sender, RoutedEventArgs e)
-        {
-            AssistantWindow assistantWindow = new AssistantWindow();
-            this.Close();
-            assistantWindow.ShowDialog();
         }
     }
 }

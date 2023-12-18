@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\gerka\OneDrive\Рабочий стол\репа\StomatologyProject\KP\obj\Debug\
+F:\репа\StomatologyProject\KP\obj\Debug\
 StomatologyProject
 none
 false
 DEBUG;TRACE
-C:\Users\gerka\OneDrive\Рабочий стол\репа\StomatologyProject\KP\App.xaml
-10-135134298
+F:\репа\StomatologyProject\KP\App.xaml
+12-1420477701
 
-15-2106046419
-30-213200369
-Windows\AssistantWindow.xaml;Windows\AuthWindow.xaml;Windows\CardWindow.xaml;Windows\DoctorWindow.xaml;Windows\EntryWindow.xaml;Windows\SpecializationWindow.xaml;Windows\UserWindow.xaml;Windows\MenuWindow.xaml;Windows\PatientWindow.xaml;Windows\ProcedureWindow.xaml;
+171438809328
+301459217009
+Windows\AssistantWindow.xaml;Windows\AuthWindow.xaml;Windows\Cards\AssistantCard.xaml;Windows\Cards\DoctorCard.xaml;Windows\CardWindow.xaml;Windows\DoctorWindow.xaml;Windows\EntryWindow.xaml;Windows\SpecializationWindow.xaml;Windows\UserWindow.xaml;Windows\MenuWindow.xaml;Windows\PatientWindow.xaml;Windows\ProcedureWindow.xaml;
 
 True
 

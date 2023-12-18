@@ -102,6 +102,12 @@
     <Compile Include="Windows\AssistantWindow.xaml.cs">
       <DependentUpon>AssistantWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Cards\AssistantCard.xaml.cs">
+      <DependentUpon>AssistantCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cards\DoctorCard.xaml.cs">
+      <DependentUpon>DoctorCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\CardWindow.xaml.cs">
       <DependentUpon>CardWindow.xaml</DependentUpon>
     </Compile>
@@ -163,6 +169,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\AuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Cards\AssistantCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Cards\DoctorCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
