@@ -36,6 +36,7 @@
                 <DataGrid x:Name="TableDoctor" 
                       Style="{StaticResource MaterialDesignDataGrid}"
                       MinHeight="450"
+<<<<<<< Updated upstream
                       MinWidth="650" 
                       AutoGenerateColumns="False"
                       Margin="10,0,0,0">
@@ -60,6 +61,20 @@
                     <Image Source="Resurs\arrow-u-left-bottom.png"/>
                 </Button>
             </StackPanel>
+=======
+                      MinWidth="450"
+                      HorizontalAlignment="Center" 
+                      AutoGenerateColumns="False"
+                      IsReadOnly="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Специализация" Binding="{Binding Specialization}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Телефон" Binding="{Binding Contactinfo}" CanUserReorder="False"/>
+                </DataGrid.Columns>
+            </DataGrid>
+>>>>>>> Stashed changes
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">
                 <Button x:Name="AddButton"
                         Content="Добавить" 

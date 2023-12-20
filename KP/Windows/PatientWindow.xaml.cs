@@ -26,8 +26,17 @@ namespace StomatologyProject.Windows
         public PatientWindow()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
             patients = new PatientRepository();
             TablePatient.ItemsSource = patients.GetList();
+=======
+            _repository = new PatientRepository();
+            UpdateGrid();
+        }
+        private void UpdateGrid()
+        {
+            TablePatient.ItemsSource = _repository.GetList();
+>>>>>>> Stashed changes
         }
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {

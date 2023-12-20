@@ -25,12 +25,21 @@ namespace StomatologyProject.Windows
         public AssistantWindow()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
             assistants = new AssistantRepository();
             TableAssistant.ItemsSource = assistants.GetList();
         }
         void Updating()
         {
             TableAssistant.ItemsSource = assistants.GetList();
+=======
+            _repository = new AssistantRepository();
+            UpdateGrid();
+        }
+        private void UpdateGrid()
+        {
+            TableAssistant.ItemsSource = _repository.GetList();
+>>>>>>> Stashed changes
         }
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
@@ -38,6 +47,7 @@ namespace StomatologyProject.Windows
             this.Close();
             menuWindow.ShowDialog();
         }
+<<<<<<< Updated upstream
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             List<long> list = new List<long>();
@@ -86,5 +96,12 @@ namespace StomatologyProject.Windows
         {
             Updating();
         }
+=======
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }

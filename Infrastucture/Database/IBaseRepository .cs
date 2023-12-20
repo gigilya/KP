@@ -13,5 +13,9 @@ namespace Infrastucture.Database
         TEntity Update(TEntity entity);
         TEntity Delete(long id);
         TEntity Add(TEntity entity);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     }
 }

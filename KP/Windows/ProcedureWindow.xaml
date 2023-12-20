@@ -36,7 +36,9 @@
                       Style="{StaticResource MaterialDesignDataGrid}"
                       MinHeight="450"
                       MinWidth="450"
-                      HorizontalAlignment="Center" AutoGenerateColumns="False">
+                      HorizontalAlignment="Center" 
+                      AutoGenerateColumns="False"
+                      IsReadOnly="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Doctor.Lastname}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="ФИО Врача" Binding="{Binding Doctor.Name}" CanUserReorder="False"/>

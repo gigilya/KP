@@ -28,6 +28,7 @@ namespace Infrastucture.Mappers
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
 
+<<<<<<< Updated upstream
         }public static AssistantEntity Map( AssistantViewModel entity)
         {
             var assistantEntity = new AssistantEntity 
@@ -44,6 +45,24 @@ namespace Infrastucture.Mappers
         {
             var assistantEntity = entities.Select(x => Map(x)).ToList();
             return assistantEntity;
+=======
+        }public static AssistantEntity Map(AssistantViewModel entity)
+        {
+            var assistant = new AssistantEntity
+            { 
+                Name = entity.Name,
+                Lastname = entity.Lastname,
+                Middlename = entity.Middlename,
+                Contactinfo = entity.Contactinfo,
+                //Specialization_ = entity.Specialization,
+            };
+            return assistant;
+        }
+        public static List<AssistantEntity> Map(List<AssistantViewModel> entities)
+        {
+            var assistants = entities.Select(x => Map(x)).ToList();
+            return assistants;
+>>>>>>> Stashed changes
         }
     }
 }

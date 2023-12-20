@@ -33,10 +33,12 @@
                    FontWeight="Bold"/>
             </Canvas>
             <DataGrid x:Name="TableSpecialization" 
-                  Style="{StaticResource MaterialDesignDataGrid}"
-                  MinHeight="450"
-                  MinWidth="450"
-                  HorizontalAlignment="Center" AutoGenerateColumns="False">
+                      Style="{StaticResource MaterialDesignDataGrid}"
+                      MinHeight="450"
+                      MinWidth="450"
+                      HorizontalAlignment="Center" 
+                      AutoGenerateColumns="False"
+                      IsReadOnly="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Наименование" Binding="{Binding Name}" CanUserReorder="False"/>
                     <DataGridTextColumn Header="Цена" Binding="{Binding Wages}" CanUserReorder="False"/>

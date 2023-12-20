@@ -33,6 +33,7 @@
                         FontFamily="Arial" 
                         FontWeight="Bold"/>
             </Canvas>
+<<<<<<< Updated upstream
             <StackPanel Orientation="Horizontal">
                 <DataGrid x:Name="TableAssistant" 
                           Style="{StaticResource MaterialDesignDataGrid}"
@@ -61,6 +62,23 @@
                     <Image Source="Resurs\arrow-u-left-bottom.png"/>
                 </Button>
             </StackPanel>
+=======
+            <DataGrid x:Name="TableAssistant" 
+                       Style="{StaticResource MaterialDesignDataGrid}"
+                       MinHeight="450"
+                       MinWidth="450"
+                       HorizontalAlignment="Center" 
+                       AutoGenerateColumns="False" 
+                       IsReadOnly="False">
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Middlename}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Специализация" Binding="{Binding Specialization}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Телефон" Binding="{Binding Contactinfo}" CanUserReorder="False"/>
+                </DataGrid.Columns>
+            </DataGrid>
+>>>>>>> Stashed changes
             <Grid MinWidth="450" Height="85" HorizontalAlignment="Center" Margin="10,0,10,0">
                 <Button x:Name="AddButton"
                         Content="Добавить" 
@@ -84,7 +102,7 @@
                         Background="#FF698AFF" 
                         BorderBrush="#FF698AFF" 
                         FontFamily="Arial" 
-                        FontSize="14"/>
+                        FontSize="14" Click="UpdateButton_Click"/>
             </Grid>
         </StackPanel>
     </Grid>

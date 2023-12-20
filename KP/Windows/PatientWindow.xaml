@@ -36,10 +36,17 @@
             <DataGrid x:Name="TablePatient" 
                       Style="{StaticResource MaterialDesignDataGrid}"
                       MinHeight="450"
+<<<<<<< Updated upstream
                       MinWidth="650"
                       HorizontalAlignment="Center" 
                       AutoGenerateColumns="False"
                       Margin="10,0,0,0">
+=======
+                      MinWidth="450"
+                      HorizontalAlignment="Center" 
+                      AutoGenerateColumns="False"
+                      IsReadOnly="False">
+>>>>>>> Stashed changes
                 <DataGrid.Columns>
                      <DataGridTextColumn Header="№" Binding="{Binding Id}" CanUserReorder="False" IsReadOnly="True"/>
                      <DataGridTextColumn Header="Логин" Binding="{Binding User.Login}" CanUserReorder="False" IsReadOnly="True"/>

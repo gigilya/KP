@@ -25,6 +25,10 @@ namespace StomatologyProject.Windows
         {
             InitializeComponent();
             _repository = new SpecializationRepository();
+            UpdateGrid();
+        }
+        private void UpdateGrid()
+        {
             TableSpecialization.ItemsSource = _repository.GetList();
         }
         private void MenuButton_Click(object sender, RoutedEventArgs e)

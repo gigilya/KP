@@ -26,6 +26,7 @@ namespace StomatologyProject.Windows
         public DoctorWindow()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
             doctors = new DoctorRepository();
             users = new UserRepository();
             TableDoctor.ItemsSource = doctors.GetList();
@@ -33,8 +34,15 @@ namespace StomatologyProject.Windows
         private void Updating()
         {
             TableDoctor.ItemsSource = doctors.GetList();
+=======
+            _repository = new DoctorRepository();
+            UpdateGrid();
         }
-
+        private void UpdateGrid()
+        {
+            TableDoctor.ItemsSource = _repository.GetList();
+>>>>>>> Stashed changes
+        }
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();

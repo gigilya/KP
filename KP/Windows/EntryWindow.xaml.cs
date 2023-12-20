@@ -25,6 +25,10 @@ namespace StomatologyProject.Windows
         {
             InitializeComponent();
             _repository = new EntryRepository();
+            UpdateGrid();
+        }
+        private void UpdateGrid()
+        {
             TableEntry.ItemsSource = _repository.GetList();
         }
 

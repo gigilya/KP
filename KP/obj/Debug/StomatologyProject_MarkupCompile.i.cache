@@ -9,12 +9,21 @@ StomatologyProject
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 F:\репа\StomatologyProject\KP\App.xaml
 12-1420477701
 
 171438809328
 301459217009
 Windows\AssistantWindow.xaml;Windows\AuthWindow.xaml;Windows\Cards\AssistantCard.xaml;Windows\Cards\DoctorCard.xaml;Windows\CardWindow.xaml;Windows\DoctorWindow.xaml;Windows\EntryWindow.xaml;Windows\SpecializationWindow.xaml;Windows\UserWindow.xaml;Windows\MenuWindow.xaml;Windows\PatientWindow.xaml;Windows\ProcedureWindow.xaml;
+=======
+C:\Users\gerka\OneDrive\Рабочий стол\репа\StomatologyProject\KP\App.xaml
+101000659262
+
+15-9968459
+291322469987
+Windows\AssistantWindow.xaml;Windows\AuthWindow.xaml;Windows\Сards\UserCardWindow.xaml;Windows\DoctorWindow.xaml;Windows\EntryWindow.xaml;Windows\SpecializationWindow.xaml;Windows\UserWindow.xaml;Windows\MenuWindow.xaml;Windows\PatientWindow.xaml;Windows\ProcedureWindow.xaml;
+>>>>>>> Stashed changes
 
 False
 

@@ -47,10 +47,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
-      <HintPath>..\packages\MahApps.Metro.2.4.10\lib\net47\MahApps.Metro.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -102,6 +98,7 @@
     <Compile Include="Windows\AssistantWindow.xaml.cs">
       <DependentUpon>AssistantWindow.xaml</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Windows\Cards\AssistantCard.xaml.cs">
       <DependentUpon>AssistantCard.xaml</DependentUpon>
     </Compile>
@@ -110,6 +107,10 @@
     </Compile>
     <Compile Include="Windows\CardWindow.xaml.cs">
       <DependentUpon>CardWindow.xaml</DependentUpon>
+=======
+    <Compile Include="Windows\Сards\UserCardWindow.xaml.cs">
+      <DependentUpon>UserCardWindow.xaml</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Windows\DoctorWindow.xaml.cs">
       <DependentUpon>DoctorWindow.xaml</DependentUpon>
@@ -172,6 +173,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< Updated upstream
     <Page Include="Windows\Cards\AssistantCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,6 +183,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CardWindow.xaml">
+=======
+    <Page Include="Windows\Сards\UserCardWindow.xaml">
+>>>>>>> Stashed changes
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
